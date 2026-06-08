@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "1.10.0"
+  version: 2.0.1
 
 package:
   name: plumbum
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/plumbum/plumbum-${{ version }}.tar.gz
-  sha256: f8cbf0ecec0b73ff4e349398b65112a9e3f9300e7dc019001217dcc148d5c97c
+  sha256: 61623f856dcb09eb20dcd5aa708dfb3cd04b6f4ab10224d39303b163bb1c4c61
 
 build:
   number: 0
@@ -24,10 +24,7 @@ requirements:
     - hatch-vcs
   run:
     - python >=${{ python_min }}
-    - pywin32-on-windows
-    - paramiko
-    - importlib_resources
-
+    - typing_extensions
 tests:
   - python:
       imports:
